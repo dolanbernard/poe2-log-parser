@@ -60,4 +60,4 @@ pub fn file_to_lines(filename: impl AsRef<Path>) -> impl Iterator<Item = String>
 }
 
 
-const CHAT_MESSAGE_REGEX: &'static str = "\\d{4}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2} \\d{9} [abcdef\\d]{8} \\[INFO Client \\d{3}\\] #(?<username>.*): (?<message>.*)";
+const CHAT_MESSAGE_REGEX: &'static str = "(?<timestamp>\\d{4}\\/\\d{2}\\/\\d{2} \\d{2}:\\d{2}:\\d{2}) \\d* [abcdef\\d]* \\[INFO Client \\d*\\] #(?<username>.*): (?<message>.*)";
